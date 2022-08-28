@@ -1,0 +1,11 @@
+{
+  "triggers": [
+    {
+      "id": "toggled",
+      "title": {
+        "en": "On/off button was pressed",
+        "nl": "Aan/uit knop is ingedrukt"
+      }
+    }
+    ]
+}

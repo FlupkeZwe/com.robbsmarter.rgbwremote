@@ -1,0 +1,82 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.robbsmarter.rgbwremote",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "RGBW Remote by RobbSmart"
+  },
+  "description": {
+    "en": "Adds support for rgbwremote device by RobbSmart"
+  },
+  "category": [
+    "lights"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Frits Zwegers",
+    "email": "frits@zwegers.net"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "toggled",
+        "title": {
+          "en": "On/off button was pressed",
+          "nl": "Aan/uit knop is ingedrukt"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=rob_200-016-0"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "ROB_200-016-0"
+      },
+      "class": "remote",
+      "capabilities": [],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "images": {
+        "small": "/drivers/rob_200-016-0/assets/images/small.png",
+        "large": "/drivers/rob_200-016-0/assets/images/large.png",
+        "xlarge": "/drivers/rob_200-016-0/assets/images/xlarge.png"
+      },
+      "zigbee": {
+        "manufacturerName": "ROBB smarrt",
+        "productId": [
+          "ROB_200-016-0"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [],
+            "bindings": [
+              6
+            ]
+          }
+        }
+      },
+      "id": "rob_200-016-0"
+    }
+  ]
+}

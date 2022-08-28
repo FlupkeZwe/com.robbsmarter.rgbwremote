@@ -1,0 +1,29 @@
+{
+  "name": {
+    "en": "ROB_200-016-0"
+  },
+  "class": "remote",
+  "capabilities": [
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "zigbee": {
+    "manufacturerName": "ROBB smarrt",
+    "productId": ["ROB_200-016-0"],
+    "endpoints": {
+      "1": {
+        "clusters": [],
+        "bindings": [6]
+      }
+    }
+  }
+}
