@@ -47,7 +47,7 @@
   "drivers": [
     {
       "name": {
-        "en": "ROB_200-016-0"
+        "en": "RGBW Remote"
       },
       "class": "remote",
       "capabilities": [],
@@ -69,10 +69,43 @@
         ],
         "endpoints": {
           "1": {
-            "clusters": [],
             "bindings": [
-              6
+              0,
+              5,
+              6,
+              8,
+              748
             ]
+          },
+          "2": {
+            "bindings": [
+              0,
+              5,
+              6,
+              8,
+              748
+            ]
+          },
+          "3": {
+            "bindings": [
+              0,
+              5,
+              6,
+              8,
+              748
+            ]
+          }
+        },
+        "devices": {
+          "secondGroup": {
+            "name": {
+              "en": "RGBW Remote  Second group"
+            }
+          },
+          "thirdGroup": {
+            "name": {
+              "en": "RGBW Remote  Third group"
+            }
           }
         }
       },
