@@ -59,12 +59,9 @@ class RGBWRemoteControl extends ZigBeeDevice {
 
     _toggleCommandHandler() {
         this.log('Command handler triggered ' + this._getGroupNumber());
-        this.triggerFlow({
-            id: 'toggled'
-        })
-            .then(() = > this.log('flow was triggered', 'toggled'))
-            .
-        catch (err = > this.error('Error: triggering flow', 'toggled', err));
+        this.triggerFlow({id: 'toggled'})
+        .then(() => this.log('flow was triggered', 'toggled'))
+         .catch (err => this.error('Error: triggering flow', 'toggled', err));
     }
 
     _levelControlCommandHandler() {
