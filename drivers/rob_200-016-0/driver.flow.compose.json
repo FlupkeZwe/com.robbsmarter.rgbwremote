@@ -1,11 +1,110 @@
 {
-  "triggers": [
-    {
-      "id": "toggled",
-      "title": {
-        "en": "On/off button was pressed",
-        "nl": "Aan/uit knop is ingedrukt"
-      }
-    }
+    "triggers": [{
+            "id": "toggled",
+            "title": {
+                "en": "On/off button was pressed",
+                "nl": "Aan/uit knop is ingedrukt"
+            },
+            "args": []
+        }, {
+            "id": "dim_up",
+            "title": {
+                "en": "Dim level was adjusted up",
+                "nl": "Dim niveau is verhoogd"
+            },
+            "args": []
+        }, {
+            "id": "dim_down",
+            "title": {
+                "en": "Dim level was adjusted down",
+                "nl": "Dim niveau is verlaagd"
+            },
+            "args": []
+        }, {
+            "id": "recall_scene",
+            "title": {
+                "en": "A scene (([[scene_name]]) was triggered",
+                "nl": "Een scene ([[scene_name]]) is geactiveerd"
+            },
+            "args": [{
+                    "type": "dropdown",
+                    "name": "scene_name",
+                    "title": {
+                        "en": "Scene name",
+                        "nl": "Scene naam"
+                    },
+                    "values": [{
+                            "id": "1",
+                            "label": {
+                                "en": "Scene 1",
+                                "nl": "Scene 1"
+                            }
+                        }, {
+                            "id": "2",
+                            "label": {
+                                "en": "Scene 2",
+                                "nl": "Scene 2"
+                            }
+                        }, {
+                            "id": "3",
+                            "label": {
+                                "en": "Scene 3",
+                                "nl": "Scene 3"
+                            }
+                        }, {
+                            "id": "4",
+                            "label": {
+                                "en": "Scene 4",
+                                "nl": "Scene 4"
+                            }
+                        }, {
+                            "id": "5",
+                            "label": {
+                                "en": "Scene 5",
+                                "nl": "Scene 5"
+                            }
+                        }, {
+                            "id": "6",
+                            "label": {
+                                "en": "Scene 6",
+                                "nl": "Scene 6"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "id": "color_hsv_moved",
+            "title": {
+                "en": "Color changed to HSV value",
+                "nl": "Kleur is gewijzigd naar HSV waarde"
+            },
+            "tokens": [{
+                    "name": "hue",
+                    "type": "number",
+                    "title": {
+                        "en": "hue",
+                        "nl": "hue"
+                    },
+                    "example": "180"
+                }, {
+                    "name": "saturation",
+                    "type": "number",
+                    "title": {
+                        "en": "saturation",
+                        "nl": "saturation"
+                    },
+                    "example": "0.5"
+                }, {
+                    "name": "value",
+                    "type": "number",
+                    "title": {
+                        "en": "value",
+                        "nl": "value"
+                    },
+                    "example": "0.5"
+                }
+            ]
+        }
     ]
 }
