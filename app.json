@@ -375,6 +375,66 @@
         ]
       },
       {
+        "id": "colortemp_changed",
+        "title": {
+          "en": "Color temperature changed",
+          "nl": "Kleurtemperatuur is gewijzigd"
+        },
+        "titleFormatted": {
+          "en": "Color temperature changed for [[group_id]]",
+          "nl": "Kleurtemperatuur is gewijzigd voor [[group_id]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=rob_200-016-0"
+          },
+          {
+            "type": "dropdown",
+            "name": "group_id",
+            "title": {
+              "en": "Group ID",
+              "nl": "Groep ID"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1",
+                  "nl": "Groep 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2",
+                  "nl": "Groep 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3",
+                  "nl": "Groep 3"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "temp",
+            "type": "number",
+            "title": {
+              "en": "value",
+              "nl": "waarde"
+            },
+            "example": 0.5
+          }
+        ]
+      },
+      {
         "id": "color_hsv_moved",
         "title": {
           "en": "Color changed to HSV value",

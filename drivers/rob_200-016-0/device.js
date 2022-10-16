@@ -113,8 +113,10 @@ class RGBWRemoteControl extends ZigBeeDevice {
         this._registerDefaultGroupCheckRunListener(this.homey.flow.getDeviceTriggerCard('dim_down'));
     }
 
-    _moveToColorTemperatureCommandHandler({groupId}) {
-        this.log('CC Command handler triggered ' + groupId);
+    _moveToColorTemperatureCommandHandler({groupId, colorTemperature}) {
+       this.triggerFlow({id: 'colortemp_changed', tokens: {temp: Math.max(0,Number(1 - colorTemperature / 65279).toFixed(2))}, state: {groupId: groupId}})
+            .then(() => this.log('flow was triggered', 'colortemp_changed'))
+         .catch (err => this.error('Error: triggering flow', 'colortemp_changed', err));
     }
     
     _moveToColorCommandHandler({groupId, colorX, colorY}) {
@@ -131,6 +133,7 @@ class RGBWRemoteControl extends ZigBeeDevice {
     }
     
     _initColorControlRunListeners() {
+        this._registerDefaultGroupCheckRunListener(this.homey.flow.getDeviceTriggerCard('colortemp_changed'));
         this._registerDefaultGroupCheckRunListener(this.homey.flow.getDeviceTriggerCard('color_hsv_moved'));
     }
 
