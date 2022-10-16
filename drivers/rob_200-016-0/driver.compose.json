@@ -48,18 +48,6 @@
           748
         ]
       }
-    },
-    "devices": {
-      "secondGroup": {
-        "name": {
-          "en": "RGBW Remote  Second group"
-        }
-      },
-      "thirdGroup": {
-        "name": {
-          "en": "RGBW Remote  Third group"
-        }
-      }
     }
   }
 }
