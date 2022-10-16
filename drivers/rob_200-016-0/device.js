@@ -93,7 +93,7 @@ class RGBWRemoteControl extends ZigBeeDevice {
         
         const hsv = ColorConverter.xy2hsv(colorX / 65536, colorY / 65536);
         this.log('Calculated HSV H:' + hsv.h + ' S:' + hsv.s + ' V:' + hsv.v);
-        this.triggerFlow({id: 'color_hsv_moved', tokens: {hue: hsv.h / 360, saturation: hsv.s, value: hsv.v}, state: {}})
+        this.triggerFlow({id: 'color_hsv_moved', tokens: {hue: Math.min(1, Number(hsv.h / 360).toFixed(2)), saturation: Number(hsv.s.toFixed(2)), value: Number(hsv.v.toFixed(2))}, state: {}})
             .then(() => this.log('flow was triggered', 'color_hsv_moved'))
          .catch (err => this.error('Error: triggering flow', 'color_hsv_moved', err));
     }
