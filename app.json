@@ -29,16 +29,149 @@
   "flow": {
     "triggers": [
       {
-        "id": "toggled",
+        "id": "set_on",
         "title": {
-          "en": "On/off button was pressed",
-          "nl": "Aan/uit knop is ingedrukt"
+          "en": "On button was pressed",
+          "nl": "Aan knop is ingedrukt"
+        },
+        "titleFormatted": {
+          "en": "On button was pressed for [[group_id]]",
+          "nl": "Aan knop is ingedrukt voor [[group_id]]"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
             "filter": "driver_id=rob_200-016-0"
+          },
+          {
+            "type": "dropdown",
+            "name": "group_id",
+            "title": {
+              "en": "Group ID",
+              "nl": "Groep ID"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1",
+                  "nl": "Groep 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2",
+                  "nl": "Groep 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3",
+                  "nl": "Groep 3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "set_off",
+        "title": {
+          "en": "Off button was pressed",
+          "nl": "Uit knop is ingedrukt"
+        },
+        "titleFormatted": {
+          "en": "Off button was pressed for [[group_id]]",
+          "nl": "Uit knop is ingedrukt voor [[group_id]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=rob_200-016-0"
+          },
+          {
+            "type": "dropdown",
+            "name": "group_id",
+            "title": {
+              "en": "Group ID",
+              "nl": "Groep ID"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1",
+                  "nl": "Groep 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2",
+                  "nl": "Groep 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3",
+                  "nl": "Groep 3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "toggled",
+        "title": {
+          "en": "On/off button was pressed",
+          "nl": "Aan/uit knop is ingedrukt"
+        },
+        "titleFormatted": {
+          "en": "On/off button was pressed for [[group_id]]",
+          "nl": "Aan/uit knop is ingedrukt voor [[group_id]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=rob_200-016-0"
+          },
+          {
+            "type": "dropdown",
+            "name": "group_id",
+            "title": {
+              "en": "Group ID",
+              "nl": "Groep ID"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1",
+                  "nl": "Groep 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2",
+                  "nl": "Groep 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3",
+                  "nl": "Groep 3"
+                }
+              }
+            ]
           }
         ]
       },
@@ -48,11 +181,46 @@
           "en": "Dim level was adjusted up",
           "nl": "Dim niveau is verhoogd"
         },
+        "titleFormatted": {
+          "en": "Dim level was adjusted up for [[group_id]]",
+          "nl": "Dim niveau is verhoogd voor [[group_id]]"
+        },
         "args": [
           {
             "type": "device",
             "name": "device",
             "filter": "driver_id=rob_200-016-0"
+          },
+          {
+            "type": "dropdown",
+            "name": "group_id",
+            "title": {
+              "en": "Group ID",
+              "nl": "Groep ID"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1",
+                  "nl": "Groep 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2",
+                  "nl": "Groep 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3",
+                  "nl": "Groep 3"
+                }
+              }
+            ]
           }
         ]
       },
@@ -62,25 +230,95 @@
           "en": "Dim level was adjusted down",
           "nl": "Dim niveau is verlaagd"
         },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=rob_200-016-0"
-          }
-        ]
-      },
-      {
-        "id": "recall_scene",
-        "title": {
-          "en": "A scene (([[scene_name]]) was triggered",
-          "nl": "Een scene ([[scene_name]]) is geactiveerd"
+        "titleFormatted": {
+          "en": "Dim level was adjusted down for [[group_id]]",
+          "nl": "Dim niveau is verlaagd voor [[group_id]]"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
             "filter": "driver_id=rob_200-016-0"
+          },
+          {
+            "type": "dropdown",
+            "name": "group_id",
+            "title": {
+              "en": "Group ID",
+              "nl": "Groep ID"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1",
+                  "nl": "Groep 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2",
+                  "nl": "Groep 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3",
+                  "nl": "Groep 3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "recall_scene",
+        "title": {
+          "en": "A scene was triggered",
+          "nl": "Een scene is geactiveerd"
+        },
+        "titleFormatted": {
+          "en": "A scene (([[scene_name]]) was triggered for [[group_id]]",
+          "nl": "Een scene ([[scene_name]]) is geactiveerd voor [[group_id]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=rob_200-016-0"
+          },
+          {
+            "type": "dropdown",
+            "name": "group_id",
+            "title": {
+              "en": "Group ID",
+              "nl": "Groep ID"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1",
+                  "nl": "Groep 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2",
+                  "nl": "Groep 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3",
+                  "nl": "Groep 3"
+                }
+              }
+            ]
           },
           {
             "type": "dropdown",
@@ -142,6 +380,48 @@
           "en": "Color changed to HSV value",
           "nl": "Kleur is gewijzigd naar HSV waarde"
         },
+        "titleFormatted": {
+          "en": "Color changed to HSV value for [[group_id]]",
+          "nl": "Kleur is gewijzigd naar HSV waarde voor [[group_id]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=rob_200-016-0"
+          },
+          {
+            "type": "dropdown",
+            "name": "group_id",
+            "title": {
+              "en": "Group ID",
+              "nl": "Groep ID"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1",
+                  "nl": "Groep 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2",
+                  "nl": "Groep 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3",
+                  "nl": "Groep 3"
+                }
+              }
+            ]
+          }
+        ],
         "tokens": [
           {
             "name": "hue",
@@ -150,7 +430,7 @@
               "en": "hue",
               "nl": "hue"
             },
-            "example": "180"
+            "example": 0.5
           },
           {
             "name": "saturation",
@@ -159,7 +439,7 @@
               "en": "saturation",
               "nl": "saturation"
             },
-            "example": "0.5"
+            "example": 0.5
           },
           {
             "name": "value",
@@ -168,14 +448,7 @@
               "en": "value",
               "nl": "value"
             },
-            "example": "0.5"
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=rob_200-016-0"
+            "example": 0.5
           }
         ]
       }
@@ -231,18 +504,6 @@
               8,
               748
             ]
-          }
-        },
-        "devices": {
-          "secondGroup": {
-            "name": {
-              "en": "RGBW Remote  Second group"
-            }
-          },
-          "thirdGroup": {
-            "name": {
-              "en": "RGBW Remote  Third group"
-            }
           }
         }
       },
