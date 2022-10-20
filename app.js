@@ -8,7 +8,7 @@ class RGBWRemoteApp extends Homey.App {
    * onInit is called when the app is initialized.
    */
   async onInit() {
-    this.log('MyApp has been initialized');
+    this.log('RGBW Remote App has been initialized');
   }
 
 }

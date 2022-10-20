@@ -3,7 +3,7 @@
     "en": "RGBW Remote"
   },
   "class": "remote",
-  "capabilities": [],
+  "capabilities": ["measure_battery", "brightness_group1_capability", "brightness_group2_capability", "brightness_group3_capability"],
   "platforms": [
     "local"
   ],
@@ -22,8 +22,12 @@
     ],
     "endpoints": {
       "1": {
+        "clusters": [
+          1
+        ],
         "bindings": [
           0,
+          1,
           5,
           6,
           8,

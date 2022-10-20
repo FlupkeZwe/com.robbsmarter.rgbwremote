@@ -520,7 +520,12 @@
         "en": "RGBW Remote"
       },
       "class": "remote",
-      "capabilities": [],
+      "capabilities": [
+        "measure_battery",
+        "brightness_group1_capability",
+        "brightness_group2_capability",
+        "brightness_group3_capability"
+      ],
       "platforms": [
         "local"
       ],
@@ -539,8 +544,12 @@
         ],
         "endpoints": {
           "1": {
+            "clusters": [
+              1
+            ],
             "bindings": [
               0,
+              1,
               5,
               6,
               8,
@@ -569,5 +578,55 @@
       },
       "id": "rob_200-016-0"
     }
-  ]
+  ],
+  "capabilities": {
+    "brightness_group1_capability": {
+      "type": "number",
+      "title": {
+        "en": "Brightness group 1",
+        "nl": "Helderheid groep 1"
+      },
+      "uiComponent": "slider",
+      "getable": true,
+      "setable": true,
+      "units": {
+        "en": "%"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "brightness_group2_capability": {
+      "type": "number",
+      "title": {
+        "en": "Brightness group 2",
+        "nl": "Helderheid groep 2"
+      },
+      "uiComponent": "slider",
+      "getable": true,
+      "setable": true,
+      "units": {
+        "en": "%"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "brightness_group3_capability": {
+      "type": "number",
+      "title": {
+        "en": "Brightnes group 3",
+        "nl": "Helderheid groep 3"
+      },
+      "uiComponent": "slider",
+      "getable": true,
+      "setable": true,
+      "units": {
+        "en": "%"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1
+    }
+  }
 }
